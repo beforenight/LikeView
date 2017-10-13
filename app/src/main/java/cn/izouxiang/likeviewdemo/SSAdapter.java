@@ -31,9 +31,11 @@ public class SSAdapter extends RecyclerView.Adapter<SSAdapter.SSHolder> {
     }
 
     @Override
-    public SSHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(mContext).inflate(R.layout.layout_item, parent, false);
-        return new SSHolder(view);
+    public int getItemCount() {
+        if (null != ssEntities) {
+            return ssEntities.size();
+        }
+        return 0;
     }
 
     @Override
@@ -57,7 +59,7 @@ public class SSAdapter extends RecyclerView.Adapter<SSAdapter.SSHolder> {
         holder.comment.setNumber(entity.commentNum);
         //设置图形适配器
         holder.comment.setGraphAdapter(CommentPathAdapter.getInstance());
-        holder.comment.setCallback(new LikeView.SimpleCallback(){
+        holder.comment.setCallback(new LikeView.SimpleCallback() {
             @Override
             public boolean onClick(LikeView view) {
                 Snackbar.make(view, "你点击" + entity.name + "的评论按钮", Snackbar.LENGTH_SHORT).show();
@@ -70,11 +72,9 @@ public class SSAdapter extends RecyclerView.Adapter<SSAdapter.SSHolder> {
     }
 
     @Override
-    public int getItemCount() {
-        if (null != ssEntities) {
-            return ssEntities.size();
-        }
-        return 0;
+    public SSHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(mContext).inflate(R.layout.layout_item, parent, false);
+        return new SSHolder(view);
     }
 
     class SSHolder extends RecyclerView.ViewHolder {

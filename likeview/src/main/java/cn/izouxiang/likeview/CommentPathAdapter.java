@@ -7,9 +7,10 @@ import android.graphics.Path;
  */
 
 public class CommentPathAdapter implements LikeView.GraphAdapter {
-    private static CommentPathAdapter instance;
     private static final float xOffsetScale = 0.06f;
     private static final float yOffsetScale = 0.2f;
+    private static CommentPathAdapter instance;
+
     //可用单例模式
     public static CommentPathAdapter getInstance() {
         synchronized (CommentPathAdapter.class) {
@@ -19,6 +20,7 @@ public class CommentPathAdapter implements LikeView.GraphAdapter {
         }
         return instance;
     }
+
     //这里绘制你想要的图形
     @Override
     public Path getGraphPath(LikeView view, int length) {

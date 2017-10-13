@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LikeView.iml" filepath="$PROJECT_DIR$/LikeView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LikeView.iml" filepath="$PROJECT_DIR$/LikeView.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/likeview/likeview.iml" filepath="$PROJECT_DIR$/likeview/likeview.iml" />
       <module fileurl="file://$PROJECT_DIR$/likeview/likeview.iml" filepath="$PROJECT_DIR$/likeview/likeview.iml" />
     </modules>
   </component>

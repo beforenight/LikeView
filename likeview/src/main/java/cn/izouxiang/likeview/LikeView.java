@@ -9,7 +9,6 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.support.annotation.ColorInt;
 import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.util.TypedValue;
@@ -50,13 +49,13 @@ public class LikeView extends View {
     private float textHeight;
     private float textBaseLineHeight;
     private int direction;
-    @ColorInt
+
     //文本颜色
     private int textColor;
-    @ColorInt
+
     //图形颜色
     private int graphColor;
-    @ColorInt
+
     //图形动画颜色
     private int animateColor;
     private int textSize;
@@ -530,7 +529,7 @@ public class LikeView extends View {
         return textColor;
     }
 
-    public void setTextColor(@ColorInt int textColor) {
+    public void setTextColor( int textColor) {
         this.textColor = textColor;
         textPaint.setColor(textColor);
         postInvalidate();
@@ -540,7 +539,7 @@ public class LikeView extends View {
         return graphColor;
     }
 
-    public void setGraphColor(@ColorInt int graphColor) {
+    public void setGraphColor( int graphColor) {
         this.graphColor = graphColor;
         graphPaint.setColor(graphColor);
         postInvalidate();
@@ -550,7 +549,7 @@ public class LikeView extends View {
         return animateColor;
     }
 
-    public void setAnimateColor(@ColorInt int animateColor) {
+    public void setAnimateColor( int animateColor) {
         this.animateColor = animateColor;
         animatePaint.setColor(animateColor);
         postInvalidate();

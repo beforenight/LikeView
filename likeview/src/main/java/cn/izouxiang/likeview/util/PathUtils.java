@@ -8,10 +8,31 @@ import android.graphics.Path;
 
 public class PathUtils {
     /**
+     * 添加一个路径到指定的Path
+     *
+     * @param path   被添加的Path
+     * @param x      起点x
+     * @param y      起点y
+     * @param length 正方形边长
+     * @param scale  缩放比例
+     */
+    public static void addHeart(Path path, int x, int y, int length, float scale) {
+        Path temp = getHeartPath(length, scale);
+        temp.offset(x, y);
+        path.addPath(temp);
+    }
+
+    public static void addHeart(Path path, int x, int y, int length) {
+        Path temp = getHeartPath(length);
+        temp.offset(x, y);
+        path.addPath(temp);
+    }
+
+    /**
      * 在一个正方形中画一个爱心
      *
      * @param length 正方形边长
-     * @param scale 缩放比
+     * @param scale  缩放比
      * @return 包含Heart路径的Path
      */
     public static Path getHeartPath(int length, float scale) {
@@ -27,29 +48,8 @@ public class PathUtils {
         return path;
     }
 
-
     public static Path getHeartPath(int length) {
         return getHeartPath(length, 1f);
-    }
-
-    /**
-     * 添加一个路径到指定的Path
-     * @param path 被添加的Path
-     * @param x 起点x
-     * @param y 起点y
-     * @param length 正方形边长
-     * @param scale 缩放比例
-     */
-    public static void addHeart(Path path, int x, int y, int length, float scale) {
-        Path temp = getHeartPath(length, scale);
-        temp.offset(x, y);
-        path.addPath(temp);
-    }
-
-    public static void addHeart(Path path, int x, int y, int length) {
-        Path temp = getHeartPath(length);
-        temp.offset(x, y);
-        path.addPath(temp);
     }
 
 }
