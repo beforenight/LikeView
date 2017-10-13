@@ -1,4 +1,8 @@
 # 仿即刻APP点赞桃心的效果
+
+----------
+## 下载
+[likeView.apk](https://github.com/beforenight/LikeView/blob/master/img/likeView.apk)
 ## 2017-10-13更新
 - 修改示例程序布局
 - 删除likeView不需要的依赖库
