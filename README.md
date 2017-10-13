@@ -1,4 +1,10 @@
 # 仿即刻APP点赞桃心的效果
+## 2017-10-13更新
+- 修改示例程序布局
+- 删除likeView不需要的依赖库
+- 解决com.android.dex.DexException: Multiple dex files define L<your app packagename>/BuildConfig;
+http://www.j99.io/2015/03/17/%E8%A7%A3%E5%86%B3com-android-dex-DexException-Multiple-dex-files-define-L-your-app-packagename-BuildConfig/
+
 ## 2016-12-5更新
 - 修改测量逻辑
 - 添加了对齐方式
